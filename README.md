@@ -1,11 +1,13 @@
 # LunchMoney API Client
 
 <div align="center">
-  <img src="assets/lunch-money-api-logo.png" width="45%" />
-  <img src="assets/ts-logo-round-128.svg" width="45%" />
+  <img src="assets/lunch-money-api-logo.png" width="45%" style="max-height: 100px; width: auto;"/>
+  <img src="assets/ts-logo-round-128.svg" width="45%" style="max-height: 100px; width: auto;"/>
 </div>
 
+<div align="center">
 This is a TypeScript client for the LunchMoney API.
+</div>
 
 ## Installation
 
