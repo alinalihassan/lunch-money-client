@@ -1,12 +1,33 @@
 {
   "name": "lunch-money-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "author": "Alin Ali Hassan <hassanalinali@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "module": "src/index.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "description": "LunchMoney client",
+  "scripts": {
+    "build": "bun run build.mjs",
+    "prepublishOnly": "bun run build"
   },
-  "peerDependencies": {
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "bun",
+    "lunch-money"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/alinalihassan/lunch-money-client#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinalihassan/lunch-money-client.git"
+  },
+  "bugs": "https://github.com/alinalihassan/lunch-money-client/issues",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-plugin-dts": "^0.2.1",
     "typescript": "^5.0.0"
   }
 }
