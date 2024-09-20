@@ -11,7 +11,7 @@ This is a TypeScript client for the LunchMoney API.
 
 
 <p align="center">
-  <a href="https://github.com/alinalihassan/lunch-money-client"><img src="https://img.shields.io/npm/v/lunch-money-client" alt="NPM"></a>
+  <a href="https://www.npmjs.com/package/lunch-money-client"><img src="https://img.shields.io/npm/v/lunch-money-client" alt="NPM"></a>
   <a href="https://github.com/alinalihassan/lunch-money-client/blob/main/LICENSE"><img src="https://img.shields.io/github/license/alinalihassan/lunch-money-client?color=blue&label=License" alt="License"></a>
 </p>
 
