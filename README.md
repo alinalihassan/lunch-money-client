@@ -9,23 +9,29 @@
 This is a TypeScript client for the LunchMoney API.
 </div>
 
+
+<p align="center">
+  <a href="https://github.com/alinalihassan/lunch-money-client"><img src="https://img.shields.io/npm/v/lunch-money-client" alt="NPM"></a>
+  <a href="https://github.com/alinalihassan/lunch-money-client/blob/main/LICENSE"><img src="https://img.shields.io/github/license/alinalihassan/lunch-money-client?color=blue&label=License" alt="License"></a>
+</p>
+
 ## Installation
 
 ```bash
-npm install lunchmoney-api-client
+npm install lunch-money-client
 ```
 
 ## Usage
 
-First, import the `LunchMoney` class and create an instance with your API token:
+First, import the `LunchMoney` client with your API token:
 
 ```typescript
-import LunchMoney from 'lunchmoney-api-client';
+import LunchMoney from 'lunch-money-client';
 
 const lunchMoney = new LunchMoney('your-api-token-here');
 ```
 
-Then you can use the various methods to interact with the LunchMoney API:
+The types are documented with the information from the [API docs](https://lunchmoney.dev/). You can use the various methods to interact with the LunchMoney API:
 
 ```typescript
 // Get user details
@@ -89,10 +95,6 @@ The client provides methods for interacting with various LunchMoney API endpoint
 ### Crypto
 - `getCrypto()`: Get all cryptocurrency assets.
 - `updateCrypto(id, args)`: Update a manually-managed crypto asset.
-
-## Types
-
-The client uses TypeScript and provides type definitions for all method arguments and responses.Refer to the `dist/index.d.ts` file for detailed type information.
 
 ## Contributing
 
