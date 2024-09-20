@@ -39,9 +39,9 @@ jobs:
       - name: Run release
         run: |
           if [[ "${{ github.event.inputs.increment }}" == pre* ]]; then
-            bun run release -- ${{ github.event.inputs.increment }} --preRelease=${{ github.event.inputs.prerelease_type || 'beta' }}
+            bun run release -- --npm.skipChecks ${{ github.event.inputs.increment }} --preRelease=${{ github.event.inputs.prerelease_type || 'beta' }}
           else
-            bun run release -- ${{ github.event.inputs.increment }}
+            bun run release -- --npm.skipChecks ${{ github.event.inputs.increment }}
           fi
         env:
           NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
