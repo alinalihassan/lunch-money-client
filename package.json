@@ -1,6 +1,6 @@
 {
   "name": "lunch-money-client",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Alin Ali Hassan <hassanalinali@gmail.com>",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
