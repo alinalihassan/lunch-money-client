@@ -42,5 +42,8 @@
     "github": {
       "release": true
     }
+  },
+  "dependencies": {
+    "entities": "^5.0.0"
   }
 }

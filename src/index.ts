@@ -1,3 +1,4 @@
+import { decodeHTML } from "entities";
 import type {
   Asset,
   AssetEndpointArguments,
@@ -92,11 +93,26 @@ export class LunchMoney {
     }
     const response = await fetch(url, options);
     if (response.status > 399) {
-      const r = await response.text();
+      const r = decodeHTML(await response.text());
       throw new Error(r);
     } else {
-      return response.json();
+      return this.decodeHtmlEntities(await response.json());
     }
+  }
+
+  private decodeHtmlEntities(data: any): any {
+    if (typeof data === "string") {
+      return decodeHTML(data);
+    } else if (Array.isArray(data)) {
+      return data.map((item) => this.decodeHtmlEntities(item));
+    } else if (typeof data === "object" && data !== null) {
+      const decodedObject: { [key: string]: any } = {};
+      for (const [key, value] of Object.entries(data)) {
+        decodedObject[key] = this.decodeHtmlEntities(value);
+      }
+      return decodedObject;
+    }
+    return data;
   }
   //#endregion
 
@@ -467,5 +483,11 @@ export class LunchMoney {
   }
   //#endregion
 }
+
+const client = new LunchMoney(
+  "5ae7dbe47b46e549727b4312af3bca0421fd6d20550d905c3f"
+);
+
+console.log(await client.getUser());
 
 export default LunchMoney;
