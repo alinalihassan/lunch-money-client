@@ -484,10 +484,4 @@ export class LunchMoney {
   //#endregion
 }
 
-const client = new LunchMoney(
-  "5ae7dbe47b46e549727b4312af3bca0421fd6d20550d905c3f"
-);
-
-console.log(await client.getUser());
-
 export default LunchMoney;
